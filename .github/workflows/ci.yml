@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+      - name: Check installed dependencies
+        run: python -m pip check
+      - name: Validate JSON files
+        run: |
+          find contracts examples -name '*.json' -print0 \
+            | xargs -0 -n 1 python -m json.tool > /dev/null
+      - name: Check formatting
+        run: python -m ruff format --check .
+      - name: Lint
+        run: python -m ruff check .
+      - name: Run tests
+        run: python -m pytest
+      - name: Smoke test CLI
+        run: ai-data-harness evaluate --config examples/scenarios/passes_all_gates.json

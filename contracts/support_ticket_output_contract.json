@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "record_id_column": "record_id",
+  "columns": {
+    "record_id": {
+      "type": "string",
+      "required": true,
+      "nullable": false
+    },
+    "predicted_issue_category": {
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "critical": true,
+      "allowed_values": [
+        "access",
+        "billing",
+        "feedback",
+        "how_to",
+        "integration",
+        "performance",
+        "unknown"
+      ],
+      "abstention_values": [
+        "unknown"
+      ]
+    },
+    "predicted_product_area": {
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "allowed_values": [
+        "account_admin",
+        "analytics",
+        "api",
+        "authentication",
+        "mobile",
+        "notifications",
+        "payments",
+        "permissions",
+        "reporting",
+        "subscriptions",
+        "unknown"
+      ],
+      "abstention_values": [
+        "unknown"
+      ]
+    },
+    "predicted_urgency": {
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "critical": true,
+      "allowed_values": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "predicted_routing_team": {
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "allowed_values": [
+        "analytics_support",
+        "app_support",
+        "billing_ops",
+        "customer_enablement",
+        "identity_support",
+        "platform_integrations",
+        "product_feedback",
+        "security_response"
+      ]
+    },
+    "predicted_should_escalate": {
+      "type": "boolean",
+      "required": true,
+      "nullable": false,
+      "critical": true
+    },
+    "model_confidence": {
+      "type": "number",
+      "required": true,
+      "nullable": false
+    },
+    "abstained": {
+      "type": "boolean",
+      "required": true,
+      "nullable": false
+    }
+  }
+}

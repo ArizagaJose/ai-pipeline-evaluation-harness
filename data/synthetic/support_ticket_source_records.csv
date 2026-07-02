@@ -1,0 +1,13 @@
+record_id,source_channel,customer_tier,region,ticket_text
+TKT-0001,email,enterprise,na,"Invoice shows a duplicate annual platform charge after renewal."
+TKT-0002,chat,self_serve,emea,"I reset my password twice but still cannot sign in to the admin portal."
+TKT-0003,email,mid_market,na,"Reports page times out whenever I filter by the last 90 days."
+TKT-0004,web,enterprise,apac,"Webhook delivery to our CRM stopped after yesterday's API key rotation."
+TKT-0005,email,self_serve,latam,"I need to update the billing contact before the next invoice is issued."
+TKT-0006,chat,mid_market,emea,"The mobile app is slow to load dashboards during business hours."
+TKT-0007,web,enterprise,na,"A user can view projects from another workspace after role changes."
+TKT-0008,email,self_serve,na,"How do I export my monthly usage report as CSV?"
+TKT-0009,chat,mid_market,apac,"Payment failed even though the card was updated this morning."
+TKT-0010,web,enterprise,emea,"SSO login fails for all users after the identity provider certificate update."
+TKT-0011,email,self_serve,latam,"Feature request: add dark mode to the analytics dashboard."
+TKT-0012,chat,mid_market,na,"The Slack integration posts duplicate notifications for every ticket update."

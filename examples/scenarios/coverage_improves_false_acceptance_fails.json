@@ -1,0 +1,59 @@
+{
+  "paths": {
+    "contract": "../../contracts/support_ticket_output_contract.json",
+    "golden": "../../data/golden/support_ticket_golden.csv",
+    "baseline_output": "../../data/scenarios/support_ticket/coverage_improves_false_acceptance_fails/baseline_outputs.csv",
+    "candidate_output": "../../data/scenarios/support_ticket/coverage_improves_false_acceptance_fails/candidate_outputs.csv",
+    "report": "../../reports/scenarios/coverage_improves_false_acceptance_fails.md",
+    "adjudication": "../../reports/scenarios/coverage_improves_false_acceptance_fails_adjudication.json",
+    "summary": "../../reports/scenarios/coverage_improves_false_acceptance_fails_summary.json"
+  },
+  "record_id_column": "record_id",
+  "abstention_column": "abstained",
+  "attributes": {
+    "issue_category": {
+      "expected_column": "expected_issue_category",
+      "predicted_column": "predicted_issue_category"
+    },
+    "product_area": {
+      "expected_column": "expected_product_area",
+      "predicted_column": "predicted_product_area"
+    },
+    "urgency": {
+      "expected_column": "expected_urgency",
+      "predicted_column": "predicted_urgency"
+    },
+    "routing_team": {
+      "expected_column": "expected_routing_team",
+      "predicted_column": "predicted_routing_team"
+    },
+    "should_escalate": {
+      "expected_column": "expected_should_escalate",
+      "predicted_column": "predicted_should_escalate"
+    }
+  },
+  "regression_gates": [
+    {
+      "attribute": "issue_category",
+      "max_accuracy_drop": 0.0
+    },
+    {
+      "attribute": "product_area",
+      "max_accuracy_drop": 0.0
+    },
+    {
+      "attribute": "urgency",
+      "max_accuracy_drop": 0.0
+    },
+    {
+      "attribute": "routing_team",
+      "max_accuracy_drop": 0.0
+    },
+    {
+      "attribute": "should_escalate",
+      "max_accuracy_drop": 0.0
+    }
+  ],
+  "max_candidate_abstention_rate": 0.1,
+  "max_false_acceptance_rate": 0.0
+}

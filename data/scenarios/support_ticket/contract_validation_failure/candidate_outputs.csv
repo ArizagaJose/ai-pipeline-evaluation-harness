@@ -1,0 +1,13 @@
+record_id,predicted_issue_category,predicted_product_area,predicted_urgency,predicted_routing_team,predicted_should_escalate,model_confidence,abstained
+TKT-0001,refund,subscriptions,medium,billing_ops,false,0.97,false
+TKT-0002,access,authentication,medium,identity_support,false,0.96,false
+TKT-0003,performance,reporting,medium,analytics_support,false,0.95,false
+TKT-0004,integration,api,high,platform_integrations,true,0.94,false
+TKT-0005,billing,account_admin,low,billing_ops,false,0.93,false
+TKT-0006,performance,mobile,medium,app_support,false,0.92,false
+TKT-0007,access,permissions,critical,security_response,true,0.91,false
+TKT-0008,how_to,reporting,low,customer_enablement,false,0.9,false
+TKT-0009,billing,payments,medium,billing_ops,false,0.89,false
+TKT-0010,access,authentication,high,identity_support,true,0.88,false
+TKT-0011,feedback,analytics,low,product_feedback,false,0.87,false
+TKT-0012,integration,notifications,medium,platform_integrations,false,0.86,false
